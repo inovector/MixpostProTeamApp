@@ -13,6 +13,9 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule): void
     {
         \Inovector\Mixpost\Schedule::register($schedule);
+
+        $schedule->command('horizon:snapshot')->everyFiveMinutes();
+        $schedule->command('queue:prune-batches')->daily();
     }
 
     /**
