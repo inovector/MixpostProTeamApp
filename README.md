@@ -2,7 +2,7 @@
 [<img src="./art/logo.svg" alt="Logo Mixpost" />](https://mixpost.app)
 
 
-# Welcome to Mixpost Pro Team
+# Welcome to Mixpost Pro
 
 Mixpost it's the coolest Self-hosted social media management software. 
 
@@ -15,6 +15,6 @@ Join our community:
 
 ## Installation
 
-In order to be able to install all necessary dependencies you need a Mixpost Pro Team license you can buy at [mixpost.app](https://mixpost.app/).
+In order to be able to install all necessary dependencies you need a Mixpost Pro license you can buy at [mixpost.app](https://mixpost.app/).
 
 Read our [documentation](https://docs.inovector.com/books/mixpost-pro-team/page/installation-as-a-standalone-app) on how to get started.
