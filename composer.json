@@ -7,7 +7,7 @@
         "php": "^8.1",
         "doctrine/dbal": "^3.6",
         "guzzlehttp/guzzle": "^7.2",
-        "inovector/mixpost-pro-team": "dev-next",
+        "inovector/mixpost-pro-team": "^2.0",
         "laravel/framework": "^10.8",
         "laravel/horizon": "^5.15",
         "laravel/tinker": "^2.8",
