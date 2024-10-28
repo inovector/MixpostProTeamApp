@@ -5,7 +5,6 @@
     "keywords": ["inovector", "mixpost", "mixpost-pro", "mixpost-pro-team"],
     "require": {
         "php": "^8.1",
-        "doctrine/dbal": "^3.6",
         "guzzlehttp/guzzle": "^7.2",
         "inovector/mixpost-pro-team": "dev-v3-next",
         "laravel/framework": "^11.0",
