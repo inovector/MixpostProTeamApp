@@ -16,6 +16,7 @@ class Kernel extends ConsoleKernel
 
         $schedule->command('horizon:snapshot')->everyFiveMinutes();
         $schedule->command('queue:prune-batches')->daily();
+        $schedule->command('queue:prune-failed')->daily();
     }
 
     /**
