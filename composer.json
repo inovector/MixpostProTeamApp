@@ -6,7 +6,7 @@
     "require": {
         "php": "^8.2",
         "guzzlehttp/guzzle": "^7.2",
-        "inovector/mixpost-pro-team": "dev-misc/laravel12",
+        "inovector/mixpost-pro-team": "^3.6",
         "laravel/framework": "^12.0",
         "laravel/horizon": "^5.15",
         "laravel/reverb": "^1.0",
