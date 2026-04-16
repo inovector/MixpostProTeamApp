@@ -54,7 +54,8 @@
             "@php artisan mixpost:setup-gitignore",
             "@php artisan queue:batches-table",
             "@php artisan mixpost:publish",
-            "@php artisan storage:link"
+            "@php artisan storage:link",
+            "@php -r \"array_map('unlink', glob('scripts/upgrade/*'));\""
         ]
     },
     "extra": {
