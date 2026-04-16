@@ -66,32 +66,11 @@ php artisan migrate --force
 
 echo ""
 echo "Updating Horizon configuration..."
-if [ -f "config/horizon.php" ]; then
-    # Add use statement if not already present
-    if ! grep -q 'use Inovector\\Mixpost\\Horizon;' config/horizon.php; then
-        sed -i.bak "s|^use Illuminate\\\\Support\\\\Str;|use Illuminate\\\\Support\\\\Str;\nuse Inovector\\\\Mixpost\\\\Horizon;|" config/horizon.php
-    fi
-
-    # Replace defaults block
-    php -r "
-        \$file = file_get_contents('config/horizon.php');
-        \$file = preg_replace(
-            \"/('defaults'\\s*=>\\s*)\\[.*?\\],/s\",
-            \"'defaults' => Horizon::supervisors(),\",
-            \$file
-        );
-        \$file = preg_replace(
-            \"/('environments'\\s*=>\\s*)\\[.*?'local'\\s*=>\\s*\\[.*?\\],\\s*\\],/s\",
-            \"'environments' => [\n        'production' => Horizon::supervisors(),\n        'local' => Horizon::supervisors(),\n    ],\",
-            \$file
-        );
-        file_put_contents('config/horizon.php', \$file);
-    "
-
-    rm -f config/horizon.php.bak
+HORIZON_CONFIG_URL="https://raw.githubusercontent.com/inovector/MixpostProTeamApp/main/config/horizon.php"
+if curl -fsSL "$HORIZON_CONFIG_URL" -o config/horizon.php; then
     echo "Horizon configuration updated."
 else
-    echo "Warning: config/horizon.php not found, skipping Horizon configuration."
+    echo "Warning: Failed to download horizon.php from $HORIZON_CONFIG_URL, skipping Horizon configuration."
 fi
 
 echo ""
