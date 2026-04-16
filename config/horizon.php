@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Str;
+use Inovector\Mixpost\Horizon;
 
 return [
 
@@ -179,50 +180,10 @@ return [
     |
     */
 
-    'defaults' => [
-        'supervisor-1' => [
-            'connection' => 'redis',
-            'queue' => ['default'],
-            'balance' => 'auto',
-            'maxProcesses' => 1,
-            'maxTime' => 0,
-            'maxJobs' => 0,
-            'memory' => 128,
-            'tries' => 1,
-            'timeout' => 60,
-            'nice' => 0,
-        ],
-    ],
+    'defaults' => Horizon::supervisors(),
 
     'environments' => [
-        'production' => [
-            'supervisor-1' => [
-                'maxProcesses' => 10,
-                'balanceMaxShift' => 1,
-                'balanceCooldown' => 3,
-            ],
-            'mixpost-heavy' => [
-                'connection' => 'mixpost-redis',
-                'queue' => ['publish-post'],
-                'balance' => 'auto',
-                'processes' => 8,
-                'tries' => 1,
-                'timeout' => 60 * 60,
-            ],
-        ],
-
-        'local' => [
-            'supervisor-1' => [
-                'maxProcesses' => 3,
-            ],
-            'mixpost-heavy' => [
-                'connection' => 'mixpost-redis',
-                'queue' => ['publish-post'],
-                'balance' => 'auto',
-                'processes' => 3,
-                'tries' => 1,
-                'timeout' => 60 * 60,
-            ],
-        ],
+        'production' => Horizon::supervisors(),
+        'local' => Horizon::supervisors(),
     ],
 ];
