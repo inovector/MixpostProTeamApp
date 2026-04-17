@@ -1,27 +1,26 @@
 
-[<img src="./art/logo.svg" alt="Logo Mixpost" />](https://mixpost.app)
+[<img src="./art/page-cover.png" alt="Cover" />](https://mixpost.app)
 
 
-# Welcome to Mixpost Pro
+# Mixpost Pro
 
-> [!NOTE]
-> This repository only contains standalone Mixpost Pro.
-> If you're looking for the **Mixpost Pro package**, it's available exclusively to customers with an active [license](https://mixpost.app/pricing?utm_source=github&utm_medium=MixpostProTeamApp).  
-> Please refer to the private repository: <a href="https://github.com/inovector/mixpost-pro-team" rel="nofollow noreferrer">inovector/mixpost-pro-team</a>.
+Self-hosted social media management for agencies, businesses, and creators who want complete control. Open source software with no monthly fees, no limits, and full data privacy.
 
-Mixpost it's the coolest Self-hosted social media management software. 
+## Getting Started
 
-Easily create, schedule, publish, and manage social media content in one place, with no limits or monthly subscription fees. 
+A license code is required to activate Mixpost Pro. You will be prompted to enter it during installation.
 
-More details on [mixpost.app](https://mixpost.app/)
+Purchase a license at [mixpost.app](https://mixpost.app/pricing?utm_source=github&utm_medium=MixpostProTeamApp).
 
-Join our community:
+## Documentation
+
+Full installation guide, configuration, and usage instructions are available at [docs.mixpost.app/pro](https://docs.mixpost.app/pro).
+
+## Community
 
 - [Discord](https://mixpost.app/discord)
 - [Facebook Private Group](https://www.facebook.com/groups/getmixpost)
 
-## Installation
+## More Info
 
-In order to be able to install all necessary dependencies you need a Mixpost Pro license you can buy at [mixpost.app](https://mixpost.app/).
-
-Read our [documentation](https://docs.mixpost.app/pro) on how to get started.
+Visit [mixpost.app](https://mixpost.app/?utm_source=github&utm_medium=MixpostProTeamApp) to learn more.

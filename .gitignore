@@ -19,7 +19,7 @@ yarn-error.log
 /.idea
 /.vscode
 .DS_Store
-
+/.claude
 composer.lock
 public/vendor/mixpost
 public/vendor/horizon
