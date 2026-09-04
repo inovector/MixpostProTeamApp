@@ -73,14 +73,13 @@ php artisan vendor:publish --tag=mixpost-config --force
 
 echo ""
 echo "Clearing caches..."
-php artisan route:clear
-php artisan view:clear
+php artisan optimize:clear --except cache
 php artisan mixpost:clear-services-cache
 php artisan mixpost:clear-settings-cache
 
 echo ""
 echo "Optimizing application..."
-php artisan optimize
+php artisan optimize --except cache
 
 echo ""
 echo "Restarting Reverb..."
