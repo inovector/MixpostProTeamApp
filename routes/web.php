@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Inovector\Mixpost\Util;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return redirect()->to(config('mixpost.core_path'));
-});
+// Only send the domain root to Mixpost when it runs behind a path prefix.
+// With an empty core path Mixpost already owns `/`, and these routes are
+// registered after the package's, so a route here would shadow it.
+if ($corePath = Util::corePath()) {
+    Route::get('/', function () use ($corePath) {
+        return redirect()->to($corePath);
+    });
+}
